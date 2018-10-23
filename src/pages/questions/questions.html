@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar color="primary" text-center hideBackButton="true">
+    <ion-title text-center>{{taskName}} <br> {{timerH}} : {{timerM}} : {{timerS}}
+      
+
+      </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="task" *ngFor = "let item of questions; let idx = index">
+
+        <div class="head" *ngIf=" item.questions != ''">
+                {{item.question}}?
+        </div>
+        <div class="answer1" *ngIf=" item.questions != '' && item.questionType == 'FIN'">
+                <ion-input type="text" placeholder="answer..." value="" [(ngModel)]="anArray[idx]"></ion-input>
+        </div>
+
+        <div class="answer1" *ngIf=" item.questions != '' && item.questionType == 'TF'">
+                <ion-row radio-group [(ngModel)]="anArray[idx]">
+
+                        <ion-item no-lines>
+                            <ion-label> True</ion-label>
+                            <ion-radio value="true"></ion-radio>
+                        </ion-item>
+              
+                        <ion-item>
+                            <ion-label> False</ion-label>
+                            <ion-radio value="false"></ion-radio>
+                          </ion-item>
+                    </ion-row>
+        </div>
+
+    </div>
+      <button ion-button full color="primary" (click)="goTo()">Submit Answers</button>
+      
+</ion-content>

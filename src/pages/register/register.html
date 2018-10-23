@@ -1,0 +1,62 @@
+<ion-header   >
+
+  <ion-navbar clear>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+    
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <p id ="symbol"> <ion-icon name="paper" id="icon"></ion-icon></p>
+          <h4 text-center style="color: azure">CodeTribe Tasks</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <div class="forms">
+              <form [formGroup]="person" (ngSubmit)="register(person)">
+                <ion-item>
+                  <ion-label id="labels" stacked>Name</ion-label>
+                  <ion-input formControlName="name" id="input-field" type="text"></ion-input>
+                </ion-item>
+                <div *ngIf="person.controls.name.invalid && person.controls.name.dirty">
+                  <p id="warning">Please enter name</p>
+                </div>
+                <ion-item>
+                  <ion-label id="labels" stacked>Surname</ion-label>
+                  <ion-input formControlName="surname" type="text"></ion-input>
+                </ion-item>
+                <div *ngIf="person.controls.surname.invalid && person.controls.surname.dirty">
+                  <p id="warning">Please enter surname</p>
+                </div>
+                <ion-item>
+                    <ion-label id="labels" stacked>Email</ion-label>
+                    <ion-input color="white" formControlName="email" type="email"></ion-input>
+                  </ion-item>
+                <div *ngIf="person.controls.email.invalid && person.controls.email.dirty">
+                  <p id="warning">Please enter email</p>
+                </div>
+                <ion-item>
+                    <ion-label id="labels" stacked>Password</ion-label>
+                    <ion-input formControlName="password" type="password"></ion-input>
+                  </ion-item>
+                <div *ngIf="person.controls.password.invalid && person.controls.password.dirty">
+                  <p id="warning">password length must be at least 6</p>
+                </div>
+                <button ion-button id="bb" block type="submit" outline small [disabled]="person.invalid">Register</button>
+ 
+              
+            </form>
+            </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>

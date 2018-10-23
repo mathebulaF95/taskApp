@@ -1,0 +1,83 @@
+page-log-in {
+
+    ion-header {
+        .toolbar {
+          position: absolute;
+      
+          .toolbar-background {
+            background: transparent;
+          }
+          .toolbar-title {
+            color: black;
+          }
+        }
+      }
+    .content{
+        font-family: 'Tangerine', serif;
+        background-image: url('../assets/imgs/finalBlur.jpg');
+    }
+    #icon{
+        // top: 40%;
+        font-size: 140px;
+        text-align: center;
+        color: azure;
+        position: relative;
+
+    }
+    #symbol{
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+    }
+    .item{
+        background-color: transparent;
+    }
+    // .forms{
+    //     top: 45%;
+    //     width: 80%;
+    //     position: absolute;
+    //     margin-left: 5%;
+    // }
+    .input{
+        font-size: 1.2em;
+        color: rgb(202, 191, 191);
+    }
+    #labels{
+        font-size: 1.1em;
+        color: white;
+    }
+    #warning{
+        color: red;
+
+    }
+    // .info{
+    //     margin: auto;
+    //     width: 100%;
+    //     height: auto;
+    //     top: 5%;
+    //     bottom: 20%;
+    //     position: absolute;
+    //     color: rgb(202, 191, 191);
+    // }
+    #header{
+        font-size: 1.2em;
+        color: azure;
+        margin-left: 5%;
+    }
+    #login{
+        color: white;
+        border: 1px solid white;
+        margin-top: 5%;
+        width: 95% 
+        
+    }
+    .button{
+        color: white;
+        margin-left: 5%;
+        height: 40px;
+    }
+        #sasa{
+            margin-left: 5%;
+        }
+    
+}

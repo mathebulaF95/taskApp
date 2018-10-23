@@ -1,0 +1,85 @@
+page-task {
+
+    
+    
+   
+    .task-name{
+        border: 1px solid ;
+        height: 5em;
+        text-align: center;
+        background-color: white;
+    }
+
+   
+
+    .test-card{
+        margin: 2px !important;
+        width: auto;
+       // box-shadow: 10px 14px 28px rgba(10, 10, 10, 0.25), 8px 10px 0px rgba(14, 2, 2, 0.22); 
+        color: white;
+        background-color: rgb(133, 144, 148);
+        #tastName{
+            font-size: 1.3em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-md{
+            margin: 2px !important;
+        }
+    }
+    .wrapper{
+        width: 80%;
+        margin: 0.10em;
+        margin-top: 13%;
+    }
+   
+    .body{
+        border: 1px solid #2F4F4F;
+    }
+    .results-button{
+        height: 70px;
+        width: 60px;
+        right: 10%;
+        bottom:0;
+        position: fixed;
+        font-weight: bold;
+        button{
+            color:honeydew;
+        }
+       
+        
+    }
+    #iconn{
+        font-size: 30px;
+        float: right;
+        color:rgb(68, 39, 39);
+    }
+    ion-title{
+        margin: auto;
+    }
+    #icon{
+        font-size: 145px;
+        text-align: center;
+        color: black;
+        
+    }
+    #symbol{
+        font-size: 2.5em;
+        color: black;
+        text-align: center;
+        margin-top: 5%;
+    }
+    #iii{
+        margin: auto;
+        text-align: center;
+        margin-top: 25%;
+    }
+    #title{
+        color: green;
+        font-size: 100px;
+    }
+    #results{
+        //background-color: green;
+    }
+}

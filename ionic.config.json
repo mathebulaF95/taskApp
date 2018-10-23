@@ -1,0 +1,7 @@
+{
+  "name": "CodeTribe",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,25 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+      <ion-title text-center>Results</ion-title>
+    </ion-navbar>
+   
+   </ion-header>
+   
+   
+   <ion-content padding>
+  
+   
+    <div class="results-available">
+      <ion-row id="header-row">
+          <ion-col>Task Name</ion-col>
+          <ion-col>Marks</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let result of arrayResults">
+        <ion-col>{{result.taskName}} </ion-col>
+        <ion-col>{{result.marks}}%</ion-col>
+   
+      </ion-row>
+    </div>
+    
+   </ion-content>

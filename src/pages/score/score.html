@@ -1,0 +1,65 @@
+
+
+
+<ion-content padding="" id="body" text-center>
+  <div id="results" *ngIf ="scoree">
+    
+      <div *ngIf="mood == 2">
+          <h2 text-center>Score<br> {{scoreperc.toFixed(0)}}%</h2>
+        <img src="../../assets/imgs/download.png"  id="pic">
+     <b><p text-center>You have passed! Thanks for completing the task.</p></b>   
+      </div>
+    
+      <div *ngIf = "mood == 1">
+        <h2 text-center>Score<br> {{scoreperc.toFixed(0)}}%</h2>
+          <img src="../../assets/imgs/dislike-sign.png" id="pic">
+          <b><p text-center>You have failed! Thanks for completing the task.</p></b>  
+      </div>
+      <div *ngIf = "mood == 3">
+        <h2 text-center>Score<br> {{scoreperc.toFixed(0)}}%</h2>
+          <img src="../../assets/imgs/trans.png" id="pic">
+          <b><p text-center>Excellent job! Thanks for completing the task.</p></b> 
+      </div>
+  
+     
+      <div id="comment" *ngIf="rateee">
+        <h3>Rate the task</h3>
+        <rating [(ngModel)]="rate"
+            readonly="false"
+            small="false"
+            (ngModelChange)="onModelChange($event)">
+      </rating>
+  
+      
+  
+          <ion-textarea [(ngModel)]="description"
+          placeholder="Please leave a comment here" elasticTextArea ></ion-textarea>
+        
+        
+        <ion-icon name="paper-plane" id="iconn" (click)="submit()"></ion-icon>
+      </div>
+      <div id="fff">
+          <div id="iii" *ngIf="logo">
+              <p id ="symbol"> <ion-icon name="paper" id="icon"></ion-icon></p>
+          <h1>CodeTribe Tasks</h1>
+            </div>
+            <div id="but">
+                <button ion-button  outline block *ngIf="displayRatingButton" (click) ="ratee()">Click here to rate and comment!!</button>
+            </div>
+            
+           
+           
+          
+          <ion-grid padding>
+            
+              <ion-row>
+                <ion-col><button ion-button full *ngIf="!rateee" color="primary" (click) ="cont()">Continue</button></ion-col>
+                <ion-col><button ion-button full *ngIf="!rateee" color="primary" (click) ="logout()">Logout</button></ion-col>
+              </ion-row>
+             
+            </ion-grid>
+      </div>
+    
+  </div> 
+  <!-- [(ngModel)]="description" -->
+  </ion-content>

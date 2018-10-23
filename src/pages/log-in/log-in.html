@@ -1,0 +1,56 @@
+<ion-header   >
+
+  <ion-navbar clear>
+  </ion-navbar>
+
+</ion-header>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <div class="info">
+              <p id ="symbol"> <ion-icon name="paper" id="icon"></ion-icon></p>
+            <p text-center id="header">Welcome to CTT</p>
+            <p text-center id="sasa" style="color: azure">Where you can write your Tasks Online. Let's get started!</p>
+          </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <div class="forms">
+                <form [formGroup]="person" (ngSubmit)="signIN(person)"  >
+                  
+                  <ion-item>
+                      <ion-label id="labels" stacked>Email</ion-label>
+                      <ion-input color="white" formControlName="email" type="email"></ion-input>
+                    </ion-item>
+                  <div *ngIf="person.controls.email.invalid && person.controls.email.dirty">
+                    <p id="warning">Please enter email</p>
+                  </div>
+                  <ion-item>
+                      <ion-label id="labels" stacked>Password</ion-label>
+                      <ion-input formControlName="password" type="password"></ion-input>
+                    </ion-item>
+                  <div *ngIf="person.controls.password.invalid && person.controls.password.dirty">
+                    
+                  </div>
+            
+                  <button ion-button block id="login" type="submit" outline small [disabled]="person.invalid">Sign In</button>
+              </form>
+            
+              <ion-row>
+                <button ion-button  clear (click) = "showForgot()" style="color: azure">Forgot password?</button>
+              </ion-row>
+              </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+ 
+
+
+
+</ion-content>

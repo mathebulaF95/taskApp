@@ -1,0 +1,35 @@
+page-questions {
+    .button{
+        
+        margin-top: 10%;
+    }
+    .head{
+        height: auto;
+        text-align: center;
+        background-color: white;
+        border-bottom: 1px solid black;
+        padding: 4px;
+        border-radius: 5px;
+    }
+    .input{
+        color: black;
+    }
+    .task{
+        border: 1px solid grey;
+        box-shadow: 0 14px 28px rgba(10, 10, 10, 0.25), 0 10px 10px rgba(14, 2, 2, 0.22);
+        background-color: aliceblue;
+        border-radius: 5px;
+        margin-top: 17px;
+    }
+  
+    .answer1{
+        background-color: aliceblue;
+        border-radius: 5px;
+    }
+    .task .head p{
+        left: 0;
+        margin-left: 0%;
+        text-align: left
+    }
+    
+}
